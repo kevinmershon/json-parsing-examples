@@ -1,0 +1,6 @@
+# vim swapfile
+*.swp
+*.swo
+
+# ctags tags
+.tags

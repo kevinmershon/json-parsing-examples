@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/main.css" type="text/stylesheet" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="to_field">To:</label>
+            <input type="text" name="to_field" id="to" placeholder="abc@def.com, ghi@jkl.com" />
+        </div>
+        <div>
+            <label for="cc_field">CC:</label>
+            <input type="text" name="cc_field" id="cc" placeholder="abc@def.com, ghi@jkl.com" />
+        </div>
+        <div>
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject" />
+        </div>
+        <div>
+            <label for="body">Body:</label>
+            <textarea name="body" id="body"></textarea>
+        </div>
+        <div>
+            <input type="button" value="Send" />
+        </div>
+    </body>
+</html>
