@@ -1,8 +1,8 @@
 <ul>
-  <li>To: <%= @email.to_field %></li>
-  <li>CC: <%= @email.cc_field %></li>
-  <li>Subject: <%= @email.subject %></li>
-  <li>
+  <li id="to">To: <%= @email.to_field %></li>
+  <li id="cc">CC: <%= @email.cc_field %></li>
+  <li id="subject">Subject: <%= @email.subject %></li>
+  <li id="body">
     Body:
     <p>
       <%= @email.subject %>
