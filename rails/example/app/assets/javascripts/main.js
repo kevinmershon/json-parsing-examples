@@ -15,7 +15,9 @@ $(document).ready(function() {
                     _.map($("#cc_field").val().split(","), function(it) {
                         return { type: "cc_field", address: it.trim()};
                     })
-                ))
+                )),
+                utf8: $(this).find('input[name="utf8"]').val(),
+                authenticity_token: $(this).find('input[name="authenticity_token"]').val()
             },
             success: function(response, status, xhr) {
                 console.log(response.responseText);
