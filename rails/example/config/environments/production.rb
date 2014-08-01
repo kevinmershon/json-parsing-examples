@@ -77,4 +77,7 @@ Example::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # only log unpermitted parameters and filter them out
+  config.action_controller.action_on_unpermitted_parameters = :log
 end

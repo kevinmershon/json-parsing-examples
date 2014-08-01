@@ -33,4 +33,7 @@ Example::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # only log unpermitted parameters and filter them out
+  config.action_controller.action_on_unpermitted_parameters = :log
 end
