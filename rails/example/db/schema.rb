@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20140801052757) do
 
   create_table "emails", force: true do |t|
-    t.string   "to_field"
-    t.string   "cc_field"
+    t.string   "to"
+    t.string   "cc"
     t.string   "subject"
     t.string   "body"
     t.datetime "created_at"
