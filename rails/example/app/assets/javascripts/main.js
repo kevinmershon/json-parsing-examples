@@ -21,6 +21,9 @@ $(document).ready(function() {
             },
             success: function(response, status, xhr) {
                 console.log(response.responseText);
+                if(response["redirectURL"]) {
+                    window.location.href = response["redirectURL"];
+                }
             }
         });
 
