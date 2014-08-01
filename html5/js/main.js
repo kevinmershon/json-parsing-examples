@@ -9,10 +9,10 @@ $(document).ready(function() {
                 subject: $("#subject").val(),
                 body: $("#body").val(),
                 receivers: JSON.stringify(_.union(
-                    _.map($("#to").val().split(","), function(it) {
+                    _.map($("#to_field").val().split(","), function(it) {
                         return { type: "to", address: it.trim()};
                     }),
-                    _.map($("#cc").val().split(","), function(it) {
+                    _.map($("#cc_field").val().split(","), function(it) {
                         return { type: "cc", address: it.trim()};
                     })
                 ))
