@@ -21,19 +21,19 @@ BODY
       click_button 'Send'
     end
 
-    it 'should display the To: value correctly' do
+    it 'should display the To: value correctly', :js => true do
       page.should have_selector '#to', text: 'user1@example.com, user2@example.com'
     end
 
-    it 'should display the CC: value correctly' do
+    it 'should display the CC: value correctly', :js => true do
       page.should have_selector '#cc', text: 'user3@example.com, user4@example.com'
     end
 
-    it 'should display the subject line correctly' do
+    it 'should display the subject line correctly', :js => true do
       page.should have_selector '#subject', text: 'Important!'
     end
 
-    it 'should display the body correctly' do
+    it 'should display the body correctly', :js => true do
       page.should have_selector '#body p', text: <<BODY
 ┊┊ ☆┊┊┊┊☆┊┊☆ ┊┊┊┊┊
 ┈┈┈┈╭━━━━━━╮┊☆ ┊┊
