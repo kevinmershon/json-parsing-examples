@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#new_email").on("click", function() {
+    $("#new-email").on("click", function() {
         $.ajax({
             async: true,
             dataType: "json",
@@ -16,8 +16,8 @@ $(document).ready(function() {
                         return { type: "cc_field", address: it.trim()};
                     })
                 )),
-                utf8: $(this).find('input[name="utf8"]').val(),
-                authenticity_token: $(this).find('input[name="authenticity_token"]').val()
+                utf8: $(this).parent().find('input[name="utf8"]').val(),
+                authenticity_token: $(this).parent().find('input[name="authenticity_token"]').val()
             },
             success: function(response, status, xhr) {
                 console.log(response.responseText);
