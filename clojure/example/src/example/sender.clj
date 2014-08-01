@@ -2,7 +2,6 @@
   (:use [ring.util.response])
   (:require [clojure.data.json :as json]))
 
-
 (defn send-message
   [receivers subject body]
   (let [receivers-json (json/read-str receivers :key-fn keyword)]
