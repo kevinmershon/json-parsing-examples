@@ -1,0 +1,11 @@
+<ul>
+  <li>To: <%= @email.to_field %></li>
+  <li>CC: <%= @email.cc_field %></li>
+  <li>Subject: <%= @email.subject %></li>
+  <li>
+    Body:
+    <p>
+      <%= @email.subject %>
+    </p>
+  </li>
+</ul>
