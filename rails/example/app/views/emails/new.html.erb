@@ -1,4 +1,4 @@
-<form id="new-email">
+<%= form_for @email, id: "new-email" do |form| %>
     <div>
         <label for="to_field">To:</label>
         <input type="text" name="to_field" id="to_field" placeholder="abc@def.com, ghi@jkl.com" />
@@ -18,4 +18,4 @@
     <div>
         <input type="button" value="Send" />
     </div>
-</form>
+<% end %>
