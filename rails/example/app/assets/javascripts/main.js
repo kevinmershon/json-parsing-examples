@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#new-email").on("click", function() {
+    $("#new_email").on("click", function() {
         $.ajax({
             async: true,
             dataType: "json",
