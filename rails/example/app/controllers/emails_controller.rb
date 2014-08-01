@@ -10,18 +10,24 @@ class EmailsController < ApplicationController
   	# receivers contains both the to and cc values which have to be separated
     to_values = []
     cc_values = []
-  	params.receivers.each do |element|
-      if element.type == "to"
-        to_values << element.address
-      elsif element.type == "cc"
-        cc_values << element.address
+	receivers_list = JSON.parse(params["receivers"])
+  	receivers_list.each do |element|
+      if element["type"] == "to"
+        to_values << element["address"]
+      elsif element["type"] == "cc"
+        cc_values << element["address"]
       end
   	end
   	@email.to = to_values.join ", "
   	@email.cc = cc_values.join ", "
     @email.save
 
-    redirect_to email_path(@email)
+    
+    redirectURL = email_url(@email)
+    respond_to do |format|
+      format.html { redirect_to redirectURL }
+      format.json { render :json => { redirectURL: redirectURL } }
+    end
   end
 
   def show
