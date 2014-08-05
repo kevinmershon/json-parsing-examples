@@ -5,6 +5,6 @@ Requirements
 
 Getting Started
 --
-`bundle install`
-`bin/rake db:migrate RAILS_ENV=development`
-`rails server`
+1. `bundle install`
+1. `bin/rake db:migrate RAILS_ENV=development`
+1. `rails server`
