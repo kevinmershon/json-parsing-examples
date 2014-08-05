@@ -7,19 +7,19 @@ class EmailsController < ApplicationController
 
     @email = Email.new(email_create_params)
 
-  	# receivers contains both the to and cc values which have to be separated
+    # receivers contains both the to and cc values which have to be separated
     to_values = []
     cc_values = []
-	receivers_list = JSON.parse(params["receivers"])
-  	receivers_list.each do |element|
+    receivers_list = JSON.parse(params["receivers"])
+    receivers_list.each do |element|
       if element["type"] == "to"
         to_values << element["address"]
       elsif element["type"] == "cc"
         cc_values << element["address"]
       end
-  	end
-  	@email.to = to_values.join ", "
-  	@email.cc = cc_values.join ", "
+    end
+    @email.to = to_values.join ", "
+    @email.cc = cc_values.join ", "
     @email.save
 
     
