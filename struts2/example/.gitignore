@@ -1,0 +1,6 @@
+# copied sources from the core
+src/main/webapp/index.html
+src/main/webapp/css
+src/main/webapp/js
+
+target
