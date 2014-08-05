@@ -1,0 +1,21 @@
+<%= form_for @email do |form| %>
+    <div>
+        <label for="to_field">To:</label>
+        <input type="text" name="to_field" id="to_field" placeholder="abc@def.com, ghi@jkl.com" />
+    </div>
+    <div>
+        <label for="cc_field">CC:</label>
+        <input type="text" name="cc_field" id="cc_field" placeholder="abc@def.com, ghi@jkl.com" />
+    </div>
+    <div>
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" />
+    </div>
+    <div>
+        <label for="body">Body:</label>
+        <textarea name="body" id="body"></textarea>
+    </div>
+    <div>
+        <input id="new-email" type="button" value="Send" />
+    </div>
+<% end %>
