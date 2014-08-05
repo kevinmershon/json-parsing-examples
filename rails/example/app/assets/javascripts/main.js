@@ -10,10 +10,10 @@ $(document).ready(function() {
                 body: $("#body").val(),
                 receivers: JSON.stringify(_.union(
                     _.map($("#to_field").val().split(","), function(it) {
-                        return { type: "to_field", address: it.trim()};
+                        return { type: "to", address: it.trim()};
                     }),
                     _.map($("#cc_field").val().split(","), function(it) {
-                        return { type: "cc_field", address: it.trim()};
+                        return { type: "cc", address: it.trim()};
                     })
                 )),
                 utf8: $(this).parent().find('input[name="utf8"]').val(),
