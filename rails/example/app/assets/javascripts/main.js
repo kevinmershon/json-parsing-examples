@@ -4,7 +4,7 @@ $(document).ready(function() {
             async: true,
             dataType: "json",
             type: "post",
-            url: "http://localhost:3000/emails",
+            url: "/emails",
             data: {
                 subject: $("#subject").val(),
                 body: $("#body").val(),

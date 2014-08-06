@@ -9,15 +9,7 @@ describe 'Email submission' do
       fill_in 'To:', :with => 'user1@example.com, user2@example.com'
       fill_in 'CC:', :with => 'user3@example.com, user4@example.com'
       fill_in 'Subject', :with => 'Important!'
-      fill_in 'Body', :with => <<BODY
-┊┊ ☆┊┊┊┊☆┊┊☆ ┊┊┊┊┊
-┈┈┈┈╭━━━━━━╮┊☆ ┊┊
-┈☆ ┈┈┃╳╳╳▕╲▂▂╱▏┊┊
-┈┈☆ ┈┃╳╳╳▕▏▍▕▍▏┊┊
-┈┈╰━┫╳╳╳▕▏╰┻╯▏┊┊
-☆ ┈┈┈┃╳╳╳╳╲▂▂╱┊┊┊
-┊┊☆┊╰┳┳━━┳┳╯┊ ┊ ☆┊
-BODY
+      fill_in 'Body', :with => 'This is the body'
       click_button 'Send'
     end
 
@@ -34,15 +26,7 @@ BODY
     end
 
     it 'should display the body correctly', :js => true do
-      page.should have_selector '#body p', text: <<BODY
-┊┊ ☆┊┊┊┊☆┊┊☆ ┊┊┊┊┊
-┈┈┈┈╭━━━━━━╮┊☆ ┊┊
-┈☆ ┈┈┃╳╳╳▕╲▂▂╱▏┊┊
-┈┈☆ ┈┃╳╳╳▕▏▍▕▍▏┊┊
-┈┈╰━┫╳╳╳▕▏╰┻╯▏┊┊
-☆ ┈┈┈┃╳╳╳╳╲▂▂╱┊┊┊
-┊┊☆┊╰┳┳━━┳┳╯┊ ┊ ☆┊
-BODY
+      page.should have_selector '#body p', text: 'This is the body'
     end
   end
 end
