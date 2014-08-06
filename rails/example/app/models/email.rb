@@ -12,4 +12,12 @@
 #
 
 class Email < ActiveRecord::Base
+  
+  # receivers contains both the to and cc values which have to be separated
+  def extract_json_values(params)
+    receivers_list = JSON.parse(params[:receivers])
+    
+    self.to = receivers_list.collect { |el| el['address'] if el['type'] == 'to' }.compact.join(', ')
+    self.cc = receivers_list.collect { |el| el['address'] if el['type'] == 'cc' }.compact.join(', ')
+  end
 end
