@@ -9,7 +9,7 @@ describe 'Email submission' do
       fill_in 'To:', :with => 'user1@example.com, user2@example.com'
       fill_in 'CC:', :with => 'user3@example.com, user4@example.com'
       fill_in 'Subject', :with => 'Important!'
-      fill_in 'Body', :with => 'This is the body'
+      fill_in 'Body', :with => 'ಠ_ಠ'
       click_button 'Send'
     end
 
@@ -26,7 +26,7 @@ describe 'Email submission' do
     end
 
     it 'should display the body correctly', :js => true do
-      page.should have_selector '#body p', text: 'This is the body'
+      page.should have_selector '#body p', text: 'ಠ_ಠ'
     end
   end
 end
